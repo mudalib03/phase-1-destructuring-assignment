@@ -1,3 +1,5 @@
+const { color } = require("mocha/lib/reporters/base");
+
 const farmAnimals = 'cow horse sheep pig chicken';
 
 const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
@@ -46,3 +48,20 @@ const nestedMuppet = {
 // 7. Use destructuring to assign all variables using the keys as the variable names
 
 // 8. Use destructuring to assign songs 2 and 4, and Kermit's job and partner
+
+const [moo, neigh,baa,oink,cluck] = farmAnimals.split(" ");
+
+const [bessie, , dolly, babe, little] = farmAnimals.split(" ");
+
+const [blackAndWhite, , black, pink] = farmAnimals.split(" ");
+
+const [red, orange, yellow, green, blue, indigo, violet] = colors;
+
+const [r, o, y, g, b, i, v] = colors;
+
+const [,,,,, indg] = color;
+
+const { muppetName, color, song, job, partner } = muppet;
+
+const { nestedJob, nestedPartner } = nestedMuppet;
+const { song2, song4 } = nestedMuppet.album.theMuppetMovie;
